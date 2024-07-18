@@ -1,1 +1,0 @@
-# manlikearslan.github.io
