@@ -1,0 +1,234 @@
+/* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');h1{
+    font-family: "Playfair Display";
+}
+h2{
+    font-family: "Playfair Display";
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #0f0f0f; /* Dark futuristic background */
+    color: #ffffff; /* White text */
+    overflow-x: hidden; /* Hide horizontal overflow caused by animated gradient */
+    background: linear-gradient(-45deg, #1a1a1a, #2c2c2c, #1a1a1a, #2c2c2c); /* Dark animated gradient background */
+    background-size: 400% 400%; /* Background size for animation */
+    animation: gradientAnimation 15s ease infinite; /* Animation for gradient */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgba(26, 26, 26, 0.85); /* Dark sidebar background with transparency */
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 100; /* Ensure sidebar stays above content */
+    backdrop-filter: blur(10px); /* Glassmorphism effect for modern browsers */
+    -webkit-backdrop-filter: blur(10px); /* For older versions of Safari */
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 120px; /* Adjust size as needed */
+    border-radius: 50%; /* Make circular */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft white shadow */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.05); /* Hover effect to slightly enlarge image */
+    border-color: #b38bff; /* Purple border on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Enhanced white shadow on hover */
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-header h3 {
+    color: #b38bff; /* Purple text */
+    font-size: 24px; /* Larger font size */
+}
+
+.sidebar-header p {
+    color: #7a7a7a; /* Lighter text color */
+    font-size: 18px; /* Smaller font size */
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Larger font size */
+    border-radius: 20px;
+}
+
+.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px; /* Semi-transparent white on hover */
+}
+
+.sidebar-footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+.cv-button {
+    display: inline-block;
+    background-color: #b38bff; /* Purple button */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Button font size */
+}
+
+.cv-button:hover {
+    background-color: #916cff; /* Lighter purple on hover */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Adjust margin to accommodate sidebar */
+    position: relative;
+    z-index: 1; /* Ensure content stays above sidebar */
+    background-color: rgba(26, 26, 26, 0.85); /* Dark main content background with transparency */
+    backdrop-filter: blur(10px); /* Glassmorphism effect for modern browsers */
+    -webkit-backdrop-filter: blur(10px); /* For older versions of Safari */
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    color: #b38bff; /* Purple section heading */
+    margin-bottom: 20px;
+    font-size: 36px; /* Larger section heading */
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: rgba(26, 26, 26, 0.9); /* Dark project background with transparency */
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic shadow */
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.project h3 {
+    color: #b38bff;
+    margin-bottom: 12px;
+    font-size: 24px; /* Larger project title */
+}
+
+.project p {
+    font-size: 16px; /* Project description font size */
+    margin-bottom: 16px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: rgba(26, 26, 26, 0.9);
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 18px; /* Skills list font size */
+}
+
+.education h3 {
+    color: #b38bff;
+    margin-bottom: 12px;
+    font-size: 24px; /* Larger education title */
+}
+
+.education ul {
+    padding-left: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        overflow-y: visible;
+        margin-bottom: 20px;
+        z-index: 1; /* Ensure sidebar does not overlap content on small screens */
+        backdrop-filter: none; /* Remove glassmorphism effect on small screens */
+        -webkit-backdrop-filter: none;
+        background-color: rgba(26, 26, 26, 0.85); /* Dark sidebar background with transparency */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin for main content on small screens */
+        background-color: rgba(26, 26, 26, 0.85); /* Dark main content background with transparency */
+        backdrop-filter: none; /* Remove glassmorphism effect on small screens */
+        -webkit-backdrop-filter: none;
+    }
+}
+html {
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
