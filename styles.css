@@ -1,10 +1,5 @@
 /* Reset and base styles */
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');h1{
-    font-family: "Playfair Display";
-}
-h2{
-    font-family: "Playfair Display";
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,11 +7,11 @@ h2{
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #0f0f0f; /* Dark futuristic background */
     color: #ffffff; /* White text */
     overflow-x: hidden; /* Hide horizontal overflow caused by animated gradient */
-    background: linear-gradient(-45deg, #1a1a1a, #2c2c2c, #1a1a1a, #2c2c2c); /* Dark animated gradient background */
+    background: linear-gradient(-45deg, #353535, #3d3d3d, #1a1a1a, #2c2c2c); /* Dark animated gradient background */
     background-size: 400% 400%; /* Background size for animation */
     animation: gradientAnimation 15s ease infinite; /* Animation for gradient */
 }
@@ -32,7 +27,16 @@ body {
         background-position: 0% 50%;
     }
 }
-
+.emailClass{
+    display: flex;
+    margin: 10px 0 0 0;
+}
+.emailClass p{
+    margin: 0px 10px 0 0;
+}
+.emailClass a{
+    color: #b38bff;
+}
 .container {
     display: flex;
     flex-direction: row;
@@ -41,14 +45,12 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: rgba(26, 26, 26, 0.85); /* Dark sidebar background with transparency */
+    background-color: transparent; /* Dark sidebar background */
     padding: 20px;
     position: fixed;
     height: 100%;
     overflow-y: auto;
     z-index: 100; /* Ensure sidebar stays above content */
-    backdrop-filter: blur(10px); /* Glassmorphism effect for modern browsers */
-    -webkit-backdrop-filter: blur(10px); /* For older versions of Safari */
 }
 
 .profile-picture {
@@ -59,15 +61,6 @@ body {
 .profile-picture img {
     width: 120px; /* Adjust size as needed */
     border-radius: 50%; /* Make circular */
-    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft white shadow */
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-picture img:hover {
-    transform: scale(1.05); /* Hover effect to slightly enlarge image */
-    border-color: #b38bff; /* Purple border on hover */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Enhanced white shadow on hover */
 }
 
 .sidebar-header {
@@ -81,7 +74,7 @@ body {
 }
 
 .sidebar-header p {
-    color: #7a7a7a; /* Lighter text color */
+    color: #a1a1a1; /* Lighter text color */
     font-size: 18px; /* Smaller font size */
 }
 
@@ -101,14 +94,14 @@ body {
     display: block;
     padding: 12px;
     transition: background-color 0.3s ease;
-background-color: rgba(255, 255, 255, 0.1);
     font-size: 18px; /* Larger font size */
-    border-radius: 20px;
+    border-radius: 10px;
+    background-color: #333333;
 }
 
 .menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px; /* Semi-transparent white on hover */
+    background-color: #7c7c7c;
+    border-radius: 10px; /* Dark hover color */
 }
 
 .sidebar-footer {
@@ -135,11 +128,6 @@ background-color: rgba(255, 255, 255, 0.1);
     flex: 1;
     padding: 20px;
     margin-left: 250px; /* Adjust margin to accommodate sidebar */
-    position: relative;
-    z-index: 1; /* Ensure content stays above sidebar */
-    background-color: rgba(26, 26, 26, 0.85); /* Dark main content background with transparency */
-    backdrop-filter: blur(10px); /* Glassmorphism effect for modern browsers */
-    -webkit-backdrop-filter: blur(10px); /* For older versions of Safari */
 }
 
 .section {
@@ -159,15 +147,29 @@ background-color: rgba(255, 255, 255, 0.1);
 }
 
 .project {
-    background-color: rgba(26, 26, 26, 0.9); /* Dark project background with transparency */
+    background-color: #1a1a1a; /* Dark project background */
     padding: 24px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Futuristic shadow */
+    box-shadow: 5px 05px rgba(184, 184, 184, 0.1); /* Futuristic shadow */
     transition: transform 0.3s ease;
+    display: flex;
 }
 
 .project:hover {
     transform: translateY(-5px); /* Hover effect */
+}
+.project div a{
+    text-decoration: none;
+    color: #decdff;
+    border-bottom: 2px solid #916cff;
+}
+.project div{
+    margin-bottom: 10px;
+}
+
+.projectImages{
+    width: 200px;
+    border-radius: 10px;
 }
 
 .project h3 {
@@ -187,7 +189,7 @@ background-color: rgba(255, 255, 255, 0.1);
 }
 
 .skills-list li {
-    background-color: rgba(26, 26, 26, 0.9);
+    background-color: #1a1a1a;
     color: #ffffff;
     padding: 10px 20px;
     margin-bottom: 8px;
@@ -210,6 +212,21 @@ background-color: rgba(255, 255, 255, 0.1);
     .container {
         flex-direction: column;
     }
+    .project{
+        box-sizing: border-box;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+    }
+    
+    .projects{
+        display: column;
+    }
+    .projectImages{
+        width: 250px;
+        margin: auto;
+        display: flex;
+    }
 
     .sidebar {
         width: 100%;
@@ -217,19 +234,11 @@ background-color: rgba(255, 255, 255, 0.1);
         height: auto;
         overflow-y: visible;
         margin-bottom: 20px;
+        background-color: transparent;
         z-index: 1; /* Ensure sidebar does not overlap content on small screens */
-        backdrop-filter: none; /* Remove glassmorphism effect on small screens */
-        -webkit-backdrop-filter: none;
-        background-color: rgba(26, 26, 26, 0.85); /* Dark sidebar background with transparency */
     }
 
     .main-content {
         margin-left: 0; /* Remove margin for main content on small screens */
-        background-color: rgba(26, 26, 26, 0.85); /* Dark main content background with transparency */
-        backdrop-filter: none; /* Remove glassmorphism effect on small screens */
-        -webkit-backdrop-filter: none;
     }
-}
-html {
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
