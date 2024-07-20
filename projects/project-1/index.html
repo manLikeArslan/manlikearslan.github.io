@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for centered content */
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            color: #b38bff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .project-info {
+            margin: 0 auto;
+            padding: 20px;
+            color: #ddd;
+        }
+
+        .project-info .project-section {
+            margin-bottom: 30px;
+        }
+
+        .project-info h3 {
+            color: #b38bff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .project-info p, .project-info ul {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .project-info ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .project-info ul li {
+            margin-bottom: 10px;
+        }
+
+        .project-info ul li a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        .project-info ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .main-content h2 {
+                font-size: 2em;
+            }
+
+            .project-info h3 {
+                font-size: 1.5em;
+            }
+
+            .project-info p, .project-info ul {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-picture">
+                <img src="profile-placeholder.jpg" alt="Profile Picture">
+            </div>
+            <div class="sidebar-header">
+                <h3>Muhammad Arslan Nazir</h3>
+                <p>Upcoming Data Analyst</p>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#portfolio">Portfolio Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#education">Education & Certifications</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="cv-button">Download CV</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <section id="project-details" class="section">
+                <h2>Data Analysis of E-commerce Sales</h2>
+                <div class="project-info">
+                    <div class="project-section">
+                        <h3>Project Description</h3>
+                        <p>This project involves analyzing e-commerce sales data to identify trends, patterns, and insights that can help in decision-making processes. The analysis covers data cleaning, exploratory data analysis, and visualization of sales performance over time.</p>
+                    </div>
+                    <div class="project-section">
+                        <h3>Files</h3>
+                        <p>
+                            <ul>
+                                <li><a href="#">sales-data.csv</a></li>
+                                <li><a href="#">analysis-report.pdf</a></li>
+                                <li><a href="#">sales-dashboard.png</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="project-section">
+                        <h3>About</h3>
+                        <p>This project was undertaken to provide actionable insights to the e-commerce team regarding their sales performance. The key metrics analyzed include total sales, average order value, and customer purchase behavior. Advanced techniques such as predictive analytics were also employed to forecast future sales trends.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="scripts.js"></script> <!-- Include any JavaScript for additional functionality -->
+</body>
+</html>
