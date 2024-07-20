@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arslan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -15,7 +14,7 @@
                 <img src="profile-placeholder.jpg" alt="Profile Picture">
             </div>
             <div class="sidebar-header">
-                <h3 style="font-family: 'Playfair Display'; margin-bottom: 10px;">Muhammad Arslan Nazir</h3>
+                <h3>Muhammad Arslan Nazir</h3>
                 <p>Upcoming Data Analyst</p>
             </div>
             <ul class="menu">
@@ -33,22 +32,32 @@
                 <h2>About Me</h2>
                 <div class="about-me">
                     <p>Your introduction and personal info go here.</p>
-                    <p>Email: whoisarslan@proton.me<br>Phone: +92-370-5901113</p>
+                    <div class="emailClass">
+                        <p>Email:</p>
+                        <a href="mailto:whoisarslan@proton.me">whoisarslan@proton.me</a>
+                    </div>
+                    <p>Phone Number: +92-370-5901113</p>
+                    
                 </div>
             </section>
             <section id="portfolio" class="section">
                 <h2>Portfolio Projects</h2>
                 <div class="projects">
+
                     <!-- Each project can be represented here -->
-                    <div class="project">
-                        <h3>Project Name 1</h3>
-                        <p>Description of the project.</p>
-                        <img src="project1.jpg" alt="Project 1 Image">
+                    <div class="project"><div>
+                        <h3>Bike Sales Data Full Project</h3>
+                        <a href="/projects/project-1/index.html">Description of the project.</a>
                     </div>
-                    <div class="project">
-                        <h3>Project Name 2</h3>
-                        <p>Description of the project.</p>
-                        <img src="project2.jpg" alt="Project 2 Image">
+                        <img class="projectImages" src="projects/project-1/project-1-image.jpg" alt="Project 1 Image">
+                    </div>
+
+
+                    <div class="project"><div>
+                        <h3>Bike Sales Data Full Project</h3>
+                        <a href="/projects/project-1/index.html">Description of the project.</a>
+                    </div>
+                        <img class="projectImages" src="projects/project-1/project-1-image.jpg" alt="Project 1 Image">
                     </div>
                     <!-- Add more projects as needed -->
                 </div>
@@ -59,8 +68,8 @@
                     <li>Data Analysis</li>
                     <li>Data Visualization</li>
                     <li>SQL</li>
-                    <li>Excel</li>
-                    <li>Tableau</li>
+                    <li>Python</li>
+                    <li>Machine Learning</li>
                     <!-- Add more skills -->
                 </ul>
             </section>
@@ -79,6 +88,7 @@
             </section>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
+
